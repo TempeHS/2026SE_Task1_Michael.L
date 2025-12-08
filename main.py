@@ -3,10 +3,17 @@ from flask import redirect
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import url_for
+from flask import session
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
+import pyopt
+import pyqrcode
+import os
+import base64
+from io import BytesIO
 
 import userManagement as dbHandler
 
@@ -65,6 +72,21 @@ def index():
 @app.route("/privacy.html", methods=["GET"])
 def privacy():
     return render_template("/privacy.html")
+
+
+@app.route("/login.html", methods=["POST", "GET"])
+def login():
+    return render_template("/login.html")
+
+
+@app.route("/signup.html", methods=["POST", "GET"])
+def signup():
+    return render_template("/signup.html")
+
+
+@app.route("/2fa.html", methods=["POST"])
+def twofactorauth():
+    return render_template("/2fa.html")
 
 
 # example CSRF protected form
