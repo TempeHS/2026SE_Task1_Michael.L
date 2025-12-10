@@ -81,7 +81,15 @@ def login():
 
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
-    return render_template("/signup.html")
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        if dbHandler.insertUser(email, password):
+            return render_template("/signup.html", is_done=True)
+        else:
+            return render_template("/signup.html", dupe=True)
+    else:
+        return render_template("/signup.html")
 
 
 @app.route("/2fa.html", methods=["POST"])
