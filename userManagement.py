@@ -17,9 +17,11 @@ def insertUser(email, password):
         cur = con.cursor()
 
         # hash stuff here
+        hashed = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
 
         cur.execute(
-            "INSERT INTO UserInfo (email,password) VALUES (?,?)", (email, password)
+            "INSERT INTO UserInfo (email,password) VALUES (?,?)",
+            (email, hashed.decode("utf-8")),
         )
         con.commit()
     except sql.IntegrityError:
