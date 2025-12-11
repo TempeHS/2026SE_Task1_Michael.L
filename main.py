@@ -5,6 +5,9 @@ from flask import request
 from flask import jsonify
 from flask import url_for
 from flask import session
+from flask import make_response
+from flask.sessions import SecureCookieSessionInterface
+from datetime import timedelta
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -14,7 +17,7 @@ import pyqrcode
 import os
 import base64
 from io import BytesIO
-
+import secrets
 import userManagement as dbHandler
 
 # Code snippet for logging a message
@@ -80,11 +83,33 @@ def login():
         email = request.form["email"]
         password = request.form["password"]
         if dbHandler.VerifyUser(email, password):
-            return redirect("/2fa.html")
+            session.clear()
+            session["user"] = email
+            session["SID"] = secrets.token_urlsafe(32)
+            session.permanent = True
+            response = make_response(redirect("/2fa.html"))
+            serializer = SecureCookieSessionInterface().get_signing_serializer(app)
+            cookie_value = serializer.dumps(dict(session))
+            cookie_name = app.config.get("SESSION_COOKIE_NAME", "session")
+            response.set_cookie(
+                cookie_name,
+                cookie_value,
+                httponly=True,
+                secure=True,
+                samesite="Lax",
+                max_age=int(timedelta(minutes=30).total_seconds()),
+            )
+            return response
         else:
             return render_template("/login.html", error="Invalid Email or Password")
     else:
         return render_template("/login.html")
+
+
+@app.route("/logout.html", methods=["POST", "GET"])
+def logout():
+    session.clear()
+    return redirect("/index.html")
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
@@ -102,6 +127,8 @@ def signup():
 
 @app.route("/2fa.html", methods=["POST", "GET"])
 def twofactorauth():
+    if "user" not in session:
+        return redirect("/login.html")
     return render_template("/2fa.html")
 
 
