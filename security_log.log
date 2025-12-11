@@ -1856,3 +1856,425 @@
 2025-12-11 02:18:11,480 127.0.0.1 - - [11/Dec/2025 02:18:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
 2025-12-11 02:18:11,511 127.0.0.1 - - [11/Dec/2025 02:18:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
 2025-12-11 02:18:11,535 127.0.0.1 - - [11/Dec/2025 02:18:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:10,985 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.120:5000
+2025-12-11 03:21:11,021 [33mPress CTRL+C to quit[0m
+2025-12-11 03:21:11,025  * Restarting with stat
+2025-12-11 03:21:11,403  * Debugger is active!
+2025-12-11 03:21:11,404  * Debugger PIN: 802-655-045
+2025-12-11 03:21:13,573 127.0.0.1 - - [11/Dec/2025 03:21:13] "GET / HTTP/1.1" 200 -
+2025-12-11 03:21:13,780 127.0.0.1 - - [11/Dec/2025 03:21:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:13,786 127.0.0.1 - - [11/Dec/2025 03:21:13] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:13,802 127.0.0.1 - - [11/Dec/2025 03:21:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:13,922 127.0.0.1 - - [11/Dec/2025 03:21:13] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:14,037 127.0.0.1 - - [11/Dec/2025 03:21:14] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:14,120 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:21:14,120 127.0.0.1 - - [11/Dec/2025 03:21:14] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:21:33,975 127.0.0.1 - - [11/Dec/2025 03:21:33] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:21:34,024 127.0.0.1 - - [11/Dec/2025 03:21:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:34,027 127.0.0.1 - - [11/Dec/2025 03:21:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:34,029 127.0.0.1 - - [11/Dec/2025 03:21:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:34,067 127.0.0.1 - - [11/Dec/2025 03:21:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:34,095 127.0.0.1 - - [11/Dec/2025 03:21:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:35,250 127.0.0.1 - - [11/Dec/2025 03:21:35] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 03:21:35,296 127.0.0.1 - - [11/Dec/2025 03:21:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:35,299 127.0.0.1 - - [11/Dec/2025 03:21:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:35,300 127.0.0.1 - - [11/Dec/2025 03:21:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:35,330 127.0.0.1 - - [11/Dec/2025 03:21:35] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:35,352 127.0.0.1 - - [11/Dec/2025 03:21:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:38,603 127.0.0.1 - - [11/Dec/2025 03:21:38] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:21:38,649 127.0.0.1 - - [11/Dec/2025 03:21:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:38,651 127.0.0.1 - - [11/Dec/2025 03:21:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:38,654 127.0.0.1 - - [11/Dec/2025 03:21:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:38,684 127.0.0.1 - - [11/Dec/2025 03:21:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:38,710 127.0.0.1 - - [11/Dec/2025 03:21:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:40,240 127.0.0.1 - - [11/Dec/2025 03:21:40] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 03:21:40,291 127.0.0.1 - - [11/Dec/2025 03:21:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:40,295 127.0.0.1 - - [11/Dec/2025 03:21:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:40,298 127.0.0.1 - - [11/Dec/2025 03:21:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:40,328 127.0.0.1 - - [11/Dec/2025 03:21:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:40,353 127.0.0.1 - - [11/Dec/2025 03:21:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:59,297 127.0.0.1 - - [11/Dec/2025 03:21:59] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 03:21:59,344 127.0.0.1 - - [11/Dec/2025 03:21:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:59,346 127.0.0.1 - - [11/Dec/2025 03:21:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:59,349 127.0.0.1 - - [11/Dec/2025 03:21:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:21:59,376 127.0.0.1 - - [11/Dec/2025 03:21:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:21:59,400 127.0.0.1 - - [11/Dec/2025 03:21:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:22:28,183 127.0.0.1 - - [11/Dec/2025 03:22:28] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:22:28,228 127.0.0.1 - - [11/Dec/2025 03:22:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:22:28,231 127.0.0.1 - - [11/Dec/2025 03:22:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:22:28,233 127.0.0.1 - - [11/Dec/2025 03:22:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:22:28,263 127.0.0.1 - - [11/Dec/2025 03:22:28] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:22:28,285 127.0.0.1 - - [11/Dec/2025 03:22:28] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:26:42,740  * Detected change in '/workspaces/2026SE_Task1_Michael.L/main.py', reloading
+2025-12-11 03:26:42,769  * Restarting with stat
+2025-12-11 03:41:30,025 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.120:5000
+2025-12-11 03:41:30,026 [33mPress CTRL+C to quit[0m
+2025-12-11 03:41:30,026  * Restarting with stat
+2025-12-11 03:41:30,263  * Debugger is active!
+2025-12-11 03:41:30,263  * Debugger PIN: 802-655-045
+2025-12-11 03:41:31,408 127.0.0.1 - - [11/Dec/2025 03:41:31] "GET / HTTP/1.1" 200 -
+2025-12-11 03:41:31,593 127.0.0.1 - - [11/Dec/2025 03:41:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:31,599 127.0.0.1 - - [11/Dec/2025 03:41:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:31,607 127.0.0.1 - - [11/Dec/2025 03:41:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:31,724 127.0.0.1 - - [11/Dec/2025 03:41:31] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:31,818 127.0.0.1 - - [11/Dec/2025 03:41:31] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:31,883 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:41:31,883 127.0.0.1 - - [11/Dec/2025 03:41:31] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:41:34,504 127.0.0.1 - - [11/Dec/2025 03:41:34] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:41:34,545 127.0.0.1 - - [11/Dec/2025 03:41:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:34,548 127.0.0.1 - - [11/Dec/2025 03:41:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:34,550 127.0.0.1 - - [11/Dec/2025 03:41:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:34,579 127.0.0.1 - - [11/Dec/2025 03:41:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:34,602 127.0.0.1 - - [11/Dec/2025 03:41:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:35,669 127.0.0.1 - - [11/Dec/2025 03:41:35] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 03:41:35,714 127.0.0.1 - - [11/Dec/2025 03:41:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:35,718 127.0.0.1 - - [11/Dec/2025 03:41:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:35,722 127.0.0.1 - - [11/Dec/2025 03:41:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:35,750 127.0.0.1 - - [11/Dec/2025 03:41:35] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:35,772 127.0.0.1 - - [11/Dec/2025 03:41:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:48,453 127.0.0.1 - - [11/Dec/2025 03:41:48] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 03:41:48,495 127.0.0.1 - - [11/Dec/2025 03:41:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:48,499 127.0.0.1 - - [11/Dec/2025 03:41:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:48,501 127.0.0.1 - - [11/Dec/2025 03:41:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:41:48,533 127.0.0.1 - - [11/Dec/2025 03:41:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:41:48,556 127.0.0.1 - - [11/Dec/2025 03:41:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:20,940 127.0.0.1 - - [11/Dec/2025 03:42:20] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 03:42:20,984 127.0.0.1 - - [11/Dec/2025 03:42:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:42:20,987 127.0.0.1 - - [11/Dec/2025 03:42:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:42:20,989 127.0.0.1 - - [11/Dec/2025 03:42:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:21,015 127.0.0.1 - - [11/Dec/2025 03:42:21] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:21,039 127.0.0.1 - - [11/Dec/2025 03:42:21] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:38,135 127.0.0.1 - - [11/Dec/2025 03:42:38] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 03:42:38,184 127.0.0.1 - - [11/Dec/2025 03:42:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:38,187 127.0.0.1 - - [11/Dec/2025 03:42:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:42:38,190 127.0.0.1 - - [11/Dec/2025 03:42:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:42:38,223 127.0.0.1 - - [11/Dec/2025 03:42:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:42:38,247 127.0.0.1 - - [11/Dec/2025 03:42:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:43:35,445  * Detected change in '/workspaces/2026SE_Task1_Michael.L/userManagement.py', reloading
+2025-12-11 03:43:35,477  * Restarting with stat
+2025-12-11 03:43:35,693  * Debugger is active!
+2025-12-11 03:43:35,694  * Debugger PIN: 802-655-045
+2025-12-11 03:47:43,898 127.0.0.1 - - [11/Dec/2025 03:47:43] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:47:44,104 127.0.0.1 - - [11/Dec/2025 03:47:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:47:44,106 127.0.0.1 - - [11/Dec/2025 03:47:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:47:44,111 127.0.0.1 - - [11/Dec/2025 03:47:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:47:44,206 127.0.0.1 - - [11/Dec/2025 03:47:44] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:47:44,308 127.0.0.1 - - [11/Dec/2025 03:47:44] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,136 127.0.0.1 - - [11/Dec/2025 03:48:00] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:48:00,177 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,179 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,182 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,207 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,236 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:48:00,262 127.0.0.1 - - [11/Dec/2025 03:48:00] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 03:49:46,159  * Detected change in '/workspaces/2026SE_Task1_Michael.L/userManagement.py', reloading
+2025-12-11 03:49:46,196  * Restarting with stat
+2025-12-11 03:49:46,418  * Debugger is active!
+2025-12-11 03:49:46,418  * Debugger PIN: 802-655-045
+2025-12-11 03:49:56,779 127.0.0.1 - - [11/Dec/2025 03:49:56] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:49:56,955 127.0.0.1 - - [11/Dec/2025 03:49:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:49:56,958 127.0.0.1 - - [11/Dec/2025 03:49:56] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:49:56,960 127.0.0.1 - - [11/Dec/2025 03:49:56] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:49:57,053 127.0.0.1 - - [11/Dec/2025 03:49:57] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:49:57,159 127.0.0.1 - - [11/Dec/2025 03:49:57] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:49:57,195 127.0.0.1 - - [11/Dec/2025 03:49:57] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 03:50:01,840 127.0.0.1 - - [11/Dec/2025 03:50:01] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 03:50:01,884 127.0.0.1 - - [11/Dec/2025 03:50:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:01,887 127.0.0.1 - - [11/Dec/2025 03:50:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:01,889 127.0.0.1 - - [11/Dec/2025 03:50:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:01,919 127.0.0.1 - - [11/Dec/2025 03:50:01] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:01,941 127.0.0.1 - - [11/Dec/2025 03:50:01] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:11,153 127.0.0.1 - - [11/Dec/2025 03:50:11] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 03:50:11,214 127.0.0.1 - - [11/Dec/2025 03:50:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:11,217 127.0.0.1 - - [11/Dec/2025 03:50:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:11,220 127.0.0.1 - - [11/Dec/2025 03:50:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:11,269 127.0.0.1 - - [11/Dec/2025 03:50:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:11,295 127.0.0.1 - - [11/Dec/2025 03:50:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:12,112 127.0.0.1 - - [11/Dec/2025 03:50:12] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:50:12,155 127.0.0.1 - - [11/Dec/2025 03:50:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:12,160 127.0.0.1 - - [11/Dec/2025 03:50:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:50:12,163 127.0.0.1 - - [11/Dec/2025 03:50:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:12,191 127.0.0.1 - - [11/Dec/2025 03:50:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:12,214 127.0.0.1 - - [11/Dec/2025 03:50:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:50:21,433 The CSRF token is missing.
+2025-12-11 03:50:21,434 127.0.0.1 - - [11/Dec/2025 03:50:21] "[31m[1mPOST /login.html HTTP/1.1[0m" 400 -
+2025-12-11 03:50:21,473 127.0.0.1 - - [11/Dec/2025 03:50:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-11 03:52:01,191 The CSRF token is missing.
+2025-12-11 03:52:01,191 127.0.0.1 - - [11/Dec/2025 03:52:01] "[31m[1mPOST /login.html HTTP/1.1[0m" 400 -
+2025-12-11 03:52:07,239 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.120:5000
+2025-12-11 03:52:07,239 [33mPress CTRL+C to quit[0m
+2025-12-11 03:52:07,240  * Restarting with stat
+2025-12-11 03:52:07,471  * Debugger is active!
+2025-12-11 03:52:07,471  * Debugger PIN: 802-655-045
+2025-12-11 03:52:08,427 127.0.0.1 - - [11/Dec/2025 03:52:08] "GET / HTTP/1.1" 200 -
+2025-12-11 03:52:08,497 127.0.0.1 - - [11/Dec/2025 03:52:08] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:08,674 127.0.0.1 - - [11/Dec/2025 03:52:08] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:08,679 127.0.0.1 - - [11/Dec/2025 03:52:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:08,685 127.0.0.1 - - [11/Dec/2025 03:52:08] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:08,690 127.0.0.1 - - [11/Dec/2025 03:52:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:08,776 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:52:08,776 127.0.0.1 - - [11/Dec/2025 03:52:08] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:52:10,159 127.0.0.1 - - [11/Dec/2025 03:52:10] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:52:10,205 127.0.0.1 - - [11/Dec/2025 03:52:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:10,208 127.0.0.1 - - [11/Dec/2025 03:52:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:10,211 127.0.0.1 - - [11/Dec/2025 03:52:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:10,245 127.0.0.1 - - [11/Dec/2025 03:52:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:10,276 127.0.0.1 - - [11/Dec/2025 03:52:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:24,251 127.0.0.1 - - [11/Dec/2025 03:52:24] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:52:24,294 127.0.0.1 - - [11/Dec/2025 03:52:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:24,298 127.0.0.1 - - [11/Dec/2025 03:52:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:24,299 127.0.0.1 - - [11/Dec/2025 03:52:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:52:24,326 127.0.0.1 - - [11/Dec/2025 03:52:24] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:52:24,350 127.0.0.1 - - [11/Dec/2025 03:52:24] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,474 127.0.0.1 - - [11/Dec/2025 03:53:10] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:53:10,516 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,519 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,521 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,553 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,576 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:10,602 127.0.0.1 - - [11/Dec/2025 03:53:10] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,259 127.0.0.1 - - [11/Dec/2025 03:53:12] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-12-11 03:53:12,282 127.0.0.1 - - [11/Dec/2025 03:53:12] "GET / HTTP/1.1" 200 -
+2025-12-11 03:53:12,325 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,328 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,330 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,357 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,378 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,427 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:53:12,427 127.0.0.1 - - [11/Dec/2025 03:53:12] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:53:12,793 127.0.0.1 - - [11/Dec/2025 03:53:12] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:53:12,836 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,840 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,841 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,872 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:12,894 127.0.0.1 - - [11/Dec/2025 03:53:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:34,612 127.0.0.1 - - [11/Dec/2025 03:53:34] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:53:34,654 127.0.0.1 - - [11/Dec/2025 03:53:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:34,656 127.0.0.1 - - [11/Dec/2025 03:53:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:53:34,658 127.0.0.1 - - [11/Dec/2025 03:53:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:34,687 127.0.0.1 - - [11/Dec/2025 03:53:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:53:34,708 127.0.0.1 - - [11/Dec/2025 03:53:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:37,920  * Detected change in '/workspaces/2026SE_Task1_Michael.L/userManagement.py', reloading
+2025-12-11 03:54:37,948  * Restarting with stat
+2025-12-11 03:54:38,161  * Debugger is active!
+2025-12-11 03:54:38,161  * Debugger PIN: 802-655-045
+2025-12-11 03:54:41,978 127.0.0.1 - - [11/Dec/2025 03:54:41] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-12-11 03:54:42,015 127.0.0.1 - - [11/Dec/2025 03:54:42] "GET / HTTP/1.1" 200 -
+2025-12-11 03:54:42,075 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,076 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,130 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,165 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,187 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,242 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:54:42,242 127.0.0.1 - - [11/Dec/2025 03:54:42] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:54:42,459 127.0.0.1 - - [11/Dec/2025 03:54:42] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:54:42,508 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,511 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,514 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,543 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:42,568 127.0.0.1 - - [11/Dec/2025 03:54:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:53,939 127.0.0.1 - - [11/Dec/2025 03:54:53] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:54:53,979 127.0.0.1 - - [11/Dec/2025 03:54:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:53,982 127.0.0.1 - - [11/Dec/2025 03:54:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:54:53,984 127.0.0.1 - - [11/Dec/2025 03:54:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:54,009 127.0.0.1 - - [11/Dec/2025 03:54:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:54:54,055 127.0.0.1 - - [11/Dec/2025 03:54:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:55:47,863  * Detected change in '/workspaces/2026SE_Task1_Michael.L/userManagement.py', reloading
+2025-12-11 03:55:47,890  * Restarting with stat
+2025-12-11 03:55:48,105  * Debugger is active!
+2025-12-11 03:55:48,105  * Debugger PIN: 802-655-045
+2025-12-11 03:58:34,696  * Detected change in '/workspaces/2026SE_Task1_Michael.L/userManagement.py', reloading
+2025-12-11 03:58:34,723  * Restarting with stat
+2025-12-11 03:58:34,939  * Debugger is active!
+2025-12-11 03:58:34,940  * Debugger PIN: 802-655-045
+2025-12-11 03:58:40,469 127.0.0.1 - - [11/Dec/2025 03:58:40] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:58:40,633 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:40,659 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:40,670 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:40,767 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:40,849 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:40,881 127.0.0.1 - - [11/Dec/2025 03:58:40] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,652 127.0.0.1 - - [11/Dec/2025 03:58:41] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-12-11 03:58:41,674 127.0.0.1 - - [11/Dec/2025 03:58:41] "GET / HTTP/1.1" 200 -
+2025-12-11 03:58:41,720 127.0.0.1 - - [11/Dec/2025 03:58:41] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,723 127.0.0.1 - - [11/Dec/2025 03:58:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,725 127.0.0.1 - - [11/Dec/2025 03:58:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,759 127.0.0.1 - - [11/Dec/2025 03:58:41] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,783 127.0.0.1 - - [11/Dec/2025 03:58:41] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:41,828 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 03:58:41,828 127.0.0.1 - - [11/Dec/2025 03:58:41] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 03:58:42,137 127.0.0.1 - - [11/Dec/2025 03:58:42] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 03:58:42,182 127.0.0.1 - - [11/Dec/2025 03:58:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:42,185 127.0.0.1 - - [11/Dec/2025 03:58:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:42,187 127.0.0.1 - - [11/Dec/2025 03:58:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:42,215 127.0.0.1 - - [11/Dec/2025 03:58:42] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:42,236 127.0.0.1 - - [11/Dec/2025 03:58:42] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:48,182 127.0.0.1 - - [11/Dec/2025 03:58:48] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 03:58:48,225 127.0.0.1 - - [11/Dec/2025 03:58:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:48,228 127.0.0.1 - - [11/Dec/2025 03:58:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 03:58:48,229 127.0.0.1 - - [11/Dec/2025 03:58:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:48,261 127.0.0.1 - - [11/Dec/2025 03:58:48] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 03:58:48,283 127.0.0.1 - - [11/Dec/2025 03:58:48] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:08,788 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.120:5000
+2025-12-11 04:00:08,788 [33mPress CTRL+C to quit[0m
+2025-12-11 04:00:08,789  * Restarting with stat
+2025-12-11 04:00:09,011  * Debugger is active!
+2025-12-11 04:00:09,012  * Debugger PIN: 802-655-045
+2025-12-11 04:00:10,147 127.0.0.1 - - [11/Dec/2025 04:00:10] "GET / HTTP/1.1" 200 -
+2025-12-11 04:00:10,221 127.0.0.1 - - [11/Dec/2025 04:00:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:10,221 127.0.0.1 - - [11/Dec/2025 04:00:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:10,276 127.0.0.1 - - [11/Dec/2025 04:00:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:10,319 127.0.0.1 - - [11/Dec/2025 04:00:10] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:10,406 127.0.0.1 - - [11/Dec/2025 04:00:10] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:10,480 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x.github.dev/","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 04:00:10,480 127.0.0.1 - - [11/Dec/2025 04:00:10] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 04:00:11,293 127.0.0.1 - - [11/Dec/2025 04:00:11] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:00:11,337 127.0.0.1 - - [11/Dec/2025 04:00:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:11,340 127.0.0.1 - - [11/Dec/2025 04:00:11] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:11,342 127.0.0.1 - - [11/Dec/2025 04:00:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:11,372 127.0.0.1 - - [11/Dec/2025 04:00:11] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:11,398 127.0.0.1 - - [11/Dec/2025 04:00:11] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:12,284 127.0.0.1 - - [11/Dec/2025 04:00:12] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 04:00:12,328 127.0.0.1 - - [11/Dec/2025 04:00:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:12,331 127.0.0.1 - - [11/Dec/2025 04:00:12] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:12,333 127.0.0.1 - - [11/Dec/2025 04:00:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:12,364 127.0.0.1 - - [11/Dec/2025 04:00:12] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:12,386 127.0.0.1 - - [11/Dec/2025 04:00:12] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:19,124 127.0.0.1 - - [11/Dec/2025 04:00:19] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 04:00:19,168 127.0.0.1 - - [11/Dec/2025 04:00:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:19,171 127.0.0.1 - - [11/Dec/2025 04:00:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:19,173 127.0.0.1 - - [11/Dec/2025 04:00:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:19,201 127.0.0.1 - - [11/Dec/2025 04:00:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:19,227 127.0.0.1 - - [11/Dec/2025 04:00:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:20,081 127.0.0.1 - - [11/Dec/2025 04:00:20] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:00:20,121 127.0.0.1 - - [11/Dec/2025 04:00:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:20,125 127.0.0.1 - - [11/Dec/2025 04:00:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:20,127 127.0.0.1 - - [11/Dec/2025 04:00:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:20,153 127.0.0.1 - - [11/Dec/2025 04:00:20] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:20,177 127.0.0.1 - - [11/Dec/2025 04:00:20] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,665 127.0.0.1 - - [11/Dec/2025 04:00:34] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 04:00:34,691 127.0.0.1 - - [11/Dec/2025 04:00:34] "GET / HTTP/1.1" 200 -
+2025-12-11 04:00:34,739 127.0.0.1 - - [11/Dec/2025 04:00:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,743 127.0.0.1 - - [11/Dec/2025 04:00:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,744 127.0.0.1 - - [11/Dec/2025 04:00:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,774 127.0.0.1 - - [11/Dec/2025 04:00:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,801 127.0.0.1 - - [11/Dec/2025 04:00:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:00:34,859 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 04:00:34,859 127.0.0.1 - - [11/Dec/2025 04:00:34] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 04:01:34,840  * Detected change in '/workspaces/2026SE_Task1_Michael.L/main.py', reloading
+2025-12-11 04:01:34,869  * Restarting with stat
+2025-12-11 04:01:35,081  * Debugger is active!
+2025-12-11 04:01:35,082  * Debugger PIN: 802-655-045
+2025-12-11 04:01:59,237 127.0.0.1 - - [11/Dec/2025 04:01:59] "GET / HTTP/1.1" 200 -
+2025-12-11 04:01:59,301 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,302 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,361 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,450 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,475 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,505 127.0.0.1 - - [11/Dec/2025 04:01:59] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 04:01:59,541 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 04:01:59,541 127.0.0.1 - - [11/Dec/2025 04:01:59] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 04:01:59,965 127.0.0.1 - - [11/Dec/2025 04:01:59] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:02:00,010 127.0.0.1 - - [11/Dec/2025 04:02:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:02:00,012 127.0.0.1 - - [11/Dec/2025 04:02:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:02:00,015 127.0.0.1 - - [11/Dec/2025 04:02:00] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:02:00,043 127.0.0.1 - - [11/Dec/2025 04:02:00] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:02:00,070 127.0.0.1 - - [11/Dec/2025 04:02:00] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:02:06,350 127.0.0.1 - - [11/Dec/2025 04:02:06] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 04:02:06,374 127.0.0.1 - - [11/Dec/2025 04:02:06] "[31m[1mGET /2fa.html HTTP/1.1[0m" 405 -
+2025-12-11 04:03:04,925 127.0.0.1 - - [11/Dec/2025 04:03:04] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:03:04,969 127.0.0.1 - - [11/Dec/2025 04:03:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:04,971 127.0.0.1 - - [11/Dec/2025 04:03:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:04,974 127.0.0.1 - - [11/Dec/2025 04:03:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:05,002 127.0.0.1 - - [11/Dec/2025 04:03:05] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:05,024 127.0.0.1 - - [11/Dec/2025 04:03:05] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:05,049 127.0.0.1 - - [11/Dec/2025 04:03:05] "[36mGET /static/images/favicon.png HTTP/1.1[0m" 304 -
+2025-12-11 04:03:10,896 127.0.0.1 - - [11/Dec/2025 04:03:10] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 04:03:10,923 127.0.0.1 - - [11/Dec/2025 04:03:10] "[31m[1mGET /2fa.html HTTP/1.1[0m" 405 -
+2025-12-11 04:03:33,207  * Detected change in '/workspaces/2026SE_Task1_Michael.L/main.py', reloading
+2025-12-11 04:03:33,240  * Restarting with stat
+2025-12-11 04:03:33,464  * Debugger is active!
+2025-12-11 04:03:33,464  * Debugger PIN: 802-655-045
+2025-12-11 04:03:34,220 127.0.0.1 - - [11/Dec/2025 04:03:34] "GET /2fa.html HTTP/1.1" 200 -
+2025-12-11 04:03:34,271 127.0.0.1 - - [11/Dec/2025 04:03:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:34,274 127.0.0.1 - - [11/Dec/2025 04:03:34] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:34,275 127.0.0.1 - - [11/Dec/2025 04:03:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:34,304 127.0.0.1 - - [11/Dec/2025 04:03:34] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:34,329 127.0.0.1 - - [11/Dec/2025 04:03:34] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:36,632 127.0.0.1 - - [11/Dec/2025 04:03:36] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:03:36,686 127.0.0.1 - - [11/Dec/2025 04:03:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:36,690 127.0.0.1 - - [11/Dec/2025 04:03:36] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:36,693 127.0.0.1 - - [11/Dec/2025 04:03:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:36,726 127.0.0.1 - - [11/Dec/2025 04:03:36] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:36,755 127.0.0.1 - - [11/Dec/2025 04:03:36] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,185 127.0.0.1 - - [11/Dec/2025 04:03:37] "[32mGET /index.html HTTP/1.1[0m" 302 -
+2025-12-11 04:03:37,210 127.0.0.1 - - [11/Dec/2025 04:03:37] "GET / HTTP/1.1" 200 -
+2025-12-11 04:03:37,267 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,271 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,273 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,303 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,327 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,379 {"csp-report":{"document-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/","referrer":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/login.html","violated-directive":"manifest-src","effective-directive":"manifest-src","original-policy":"script-src 'self'; img-src 'self' data:; child-src 'self'; default-src 'self'; style-src 'self'; media-src 'self'; object-src 'self'; connect-src 'self'; base-uri 'self'; report-uri /csp_report; font-src 'self'; worker-src 'self'; frame-ancestors 'none'; form-action 'self'; frame-src 'none'","disposition":"enforce","blocked-uri":"https://fantastic-lamp-x5rx5g56x65c996x-5000.app.github.dev/static/manifest.json","status-code":200,"script-sample":""}}
+2025-12-11 04:03:37,380 127.0.0.1 - - [11/Dec/2025 04:03:37] "POST /csp_report HTTP/1.1" 200 -
+2025-12-11 04:03:37,618 127.0.0.1 - - [11/Dec/2025 04:03:37] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:03:37,657 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,660 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,663 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,692 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:37,715 127.0.0.1 - - [11/Dec/2025 04:03:37] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:38,867 127.0.0.1 - - [11/Dec/2025 04:03:38] "GET /signup.html HTTP/1.1" 200 -
+2025-12-11 04:03:38,913 127.0.0.1 - - [11/Dec/2025 04:03:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:38,915 127.0.0.1 - - [11/Dec/2025 04:03:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:38,918 127.0.0.1 - - [11/Dec/2025 04:03:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:38,944 127.0.0.1 - - [11/Dec/2025 04:03:38] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:38,967 127.0.0.1 - - [11/Dec/2025 04:03:38] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:53,805 127.0.0.1 - - [11/Dec/2025 04:03:53] "POST /signup.html HTTP/1.1" 200 -
+2025-12-11 04:03:53,855 127.0.0.1 - - [11/Dec/2025 04:03:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:53,858 127.0.0.1 - - [11/Dec/2025 04:03:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:53,860 127.0.0.1 - - [11/Dec/2025 04:03:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:53,893 127.0.0.1 - - [11/Dec/2025 04:03:53] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:53,915 127.0.0.1 - - [11/Dec/2025 04:03:53] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:54,770 127.0.0.1 - - [11/Dec/2025 04:03:54] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:03:54,807 127.0.0.1 - - [11/Dec/2025 04:03:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:54,810 127.0.0.1 - - [11/Dec/2025 04:03:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:54,812 127.0.0.1 - - [11/Dec/2025 04:03:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:03:54,840 127.0.0.1 - - [11/Dec/2025 04:03:54] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:03:54,863 127.0.0.1 - - [11/Dec/2025 04:03:54] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:02,513 127.0.0.1 - - [11/Dec/2025 04:04:02] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 04:04:02,542 127.0.0.1 - - [11/Dec/2025 04:04:02] "GET /2fa.html HTTP/1.1" 200 -
+2025-12-11 04:04:02,589 127.0.0.1 - - [11/Dec/2025 04:04:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:02,592 127.0.0.1 - - [11/Dec/2025 04:04:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:02,595 127.0.0.1 - - [11/Dec/2025 04:04:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:02,626 127.0.0.1 - - [11/Dec/2025 04:04:02] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:02,648 127.0.0.1 - - [11/Dec/2025 04:04:02] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:08,988 127.0.0.1 - - [11/Dec/2025 04:04:08] "GET /login.html HTTP/1.1" 200 -
+2025-12-11 04:04:09,049 127.0.0.1 - - [11/Dec/2025 04:04:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:09,052 127.0.0.1 - - [11/Dec/2025 04:04:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:09,054 127.0.0.1 - - [11/Dec/2025 04:04:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:09,086 127.0.0.1 - - [11/Dec/2025 04:04:09] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:09,115 127.0.0.1 - - [11/Dec/2025 04:04:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:19,099 127.0.0.1 - - [11/Dec/2025 04:04:19] "POST /login.html HTTP/1.1" 200 -
+2025-12-11 04:04:19,140 127.0.0.1 - - [11/Dec/2025 04:04:19] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:19,143 127.0.0.1 - - [11/Dec/2025 04:04:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:19,146 127.0.0.1 - - [11/Dec/2025 04:04:19] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:19,174 127.0.0.1 - - [11/Dec/2025 04:04:19] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:19,198 127.0.0.1 - - [11/Dec/2025 04:04:19] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:43,561 127.0.0.1 - - [11/Dec/2025 04:04:43] "[32mPOST /login.html HTTP/1.1[0m" 302 -
+2025-12-11 04:04:43,590 127.0.0.1 - - [11/Dec/2025 04:04:43] "GET /2fa.html HTTP/1.1" 200 -
+2025-12-11 04:04:43,636 127.0.0.1 - - [11/Dec/2025 04:04:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:43,638 127.0.0.1 - - [11/Dec/2025 04:04:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-11 04:04:43,640 127.0.0.1 - - [11/Dec/2025 04:04:43] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:43,673 127.0.0.1 - - [11/Dec/2025 04:04:43] "[36mGET /static/js/serviceWorker.js HTTP/1.1[0m" 304 -
+2025-12-11 04:04:43,699 127.0.0.1 - - [11/Dec/2025 04:04:43] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -

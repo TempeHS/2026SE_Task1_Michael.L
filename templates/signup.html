@@ -1,7 +1,7 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
   {% if is_done %}
-  <div class="alert alert-success">Signup Successful</div>
+  <div class="alert alert-info">Signup Successful</div>
   {% elif dupe %}
   <div class="alert alert-danger">Email already registered</div>
   {% endif %}

@@ -76,9 +76,15 @@ def privacy():
 
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
-    if request.method == "GET":
-        ...
-    return render_template("/login.html")
+    if request.method == "POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        if dbHandler.VerifyUser(email, password):
+            return redirect("/2fa.html")
+        else:
+            return render_template("/login.html", error="Invalid Email or Password")
+    else:
+        return render_template("/login.html")
 
 
 @app.route("/signup.html", methods=["POST", "GET"])
@@ -94,7 +100,7 @@ def signup():
         return render_template("/signup.html")
 
 
-@app.route("/2fa.html", methods=["POST"])
+@app.route("/2fa.html", methods=["POST", "GET"])
 def twofactorauth():
     return render_template("/2fa.html")
 

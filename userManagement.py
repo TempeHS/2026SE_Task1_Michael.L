@@ -29,4 +29,17 @@ def insertUser(email, password):
     return True
 
 
-def VerifyUser(email, password): ...
+def VerifyUser(email, password):
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute("SELECT password FROM UserInfo WHERE email = ?", (email,))
+        output = cur.fetchone()
+        if output is None:
+            return False
+        hashed_P = output[0]
+        return bcrypt.checkpw(password.encode("utf-8"), hashed_P.encode("utf-8"))
+    except Exception as e:
+        return False
+    finally:
+        con.close()
