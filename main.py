@@ -76,6 +76,8 @@ def privacy():
 
 @app.route("/login.html", methods=["POST", "GET"])
 def login():
+    if request.method == "GET":
+        ...
     return render_template("/login.html")
 
 
