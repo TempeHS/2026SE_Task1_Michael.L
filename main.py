@@ -145,7 +145,14 @@ def login_required(f):
 @app.route("/datalogs.html", methods=["POST", "GET"])
 @login_required
 def datalogs():
+    if request.method == "POST":
+        return render_template("/addlogs.html")
     return render_template("/datalogs.html")
+
+
+@app.route("/addlogs.html", methods=["POST", "GET"])
+def addlogs():
+    return render_template("/addlogs")
 
 
 # example CSRF protected form

@@ -1,0 +1,99 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <form action="/addlogs.html" method="POST">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Developer</label>
+        <input
+          type="text"
+          class="form-control"
+          name="developer"
+          placeholder="Developer name"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Project</label>
+        <input
+          type="text"
+          class="form-control"
+          name="project"
+          placeholder="Project name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label class="form-label">Repo</label>
+        <input
+          type="text"
+          class="form-control"
+          name="repo"
+          placeholder="repository link"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Start Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="start_time"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">End Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="end_time"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Log Entry Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="log_entry_time"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Time Worked</label>
+        <input
+          type="text"
+          class="form-control"
+          name="time_worked"
+          placeholder="e.g., 2.5 hours"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Developer Notes</label>
+      <textarea
+        class="form-control"
+        name="developer_notes"
+        rows="5"
+        placeholder="Enter detailed notes about the work performed..."
+      ></textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit Log</button>
+    </div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  </form>
+</div>
+{% endblock %}

@@ -43,3 +43,6 @@ def VerifyUser(email, password):
         return False
     finally:
         con.close()
+
+
+def getlogs(): ...
