@@ -8,6 +8,7 @@ from flask import session
 from flask import make_response
 from flask.sessions import SecureCookieSessionInterface
 from datetime import timedelta
+from functools import wraps
 import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
@@ -86,7 +87,7 @@ def login():
             session.clear()
             session["user"] = email
             session["SID"] = secrets.token_urlsafe(32)
-            session.permanent = True
+            session.permanent = False
             response = make_response(redirect("/2fa.html"))
             serializer = SecureCookieSessionInterface().get_signing_serializer(app)
             cookie_value = serializer.dumps(dict(session))
@@ -97,7 +98,6 @@ def login():
                 httponly=True,
                 secure=True,
                 samesite="Lax",
-                max_age=int(timedelta(minutes=30).total_seconds()),
             )
             return response
         else:
@@ -130,6 +130,22 @@ def twofactorauth():
     if "user" not in session:
         return redirect("/login.html")
     return render_template("/2fa.html")
+
+
+def login_required(f):
+    @wraps(f)
+    def login_required_decoration(*args, **kwargs):
+        if "user" not in session:
+            return redirect("/login.html")
+        return f(*args, **kwargs)
+
+    return login_required_decoration
+
+
+@app.route("/datalogs.html", methods=["POST", "GET"])
+@login_required
+def datalogs():
+    return render_template("/datalogs.html")
 
 
 # example CSRF protected form
