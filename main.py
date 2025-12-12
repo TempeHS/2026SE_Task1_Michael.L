@@ -125,6 +125,34 @@ def signup():
         return render_template("/signup.html")
 
 
+@app.route("/addlogs.html", methods=["POST", "GET"])
+def addlogs():
+    if request.method == "POST":
+        developer = request.form["developer"]
+        project = request.form["project"]
+        repo = request.form["repo"]
+        start_time = request.form["start_time"]
+        end_time = request.form["end_time"]
+        log_entry_time = request.form["log_entry_time"]
+        time_worked = request.form["time_worked"]
+        developer_notes = request.form["developer_notes"]
+        if dbHandler.insertLogs(
+            developer,
+            project,
+            repo,
+            start_time,
+            end_time,
+            log_entry_time,
+            time_worked,
+            developer_notes,
+        ):
+            return render_template("/addlogs.html", is_done=True)
+        else:
+            return render_template("/addlogs.html", error=True)
+    else:
+        return render_template("/addlogs")
+
+
 @app.route("/2fa.html", methods=["POST", "GET"])
 def twofactorauth():
     if "user" not in session:
@@ -148,11 +176,6 @@ def datalogs():
     if request.method == "POST":
         return render_template("/addlogs.html")
     return render_template("/datalogs.html")
-
-
-@app.route("/addlogs.html", methods=["POST", "GET"])
-def addlogs():
-    return render_template("/addlogs")
 
 
 # example CSRF protected form

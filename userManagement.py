@@ -45,4 +45,39 @@ def VerifyUser(email, password):
         con.close()
 
 
+def insertLogs(
+    developer,
+    project,
+    repo,
+    start_time,
+    end_time,
+    log_entry_time,
+    time_worked,
+    developer_notes,
+):
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute(
+            "INSERT INTO logs (developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes) VALUES (?,?,?,?,?,?,?,?)",
+            (
+                developer,
+                project,
+                repo,
+                start_time,
+                end_time,
+                log_entry_time,
+                time_worked,
+                developer_notes,
+            ),
+        )
+        con.commit()
+    except sql.IntegrityError:
+        con.rollback()
+        return False
+    finally:
+        con.close()
+    return True
+
+
 def getlogs(): ...

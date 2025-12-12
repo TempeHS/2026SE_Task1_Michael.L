@@ -1,5 +1,10 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container">
+  {% if is_done %}
+  <div class="alert alert-info">Log added successfully</div>
+  {% elif error %}
+  <div class="alert alert-danger">Log added successfully</div>
+  {% endif %}
   <form action="/addlogs.html" method="POST">
     <div class="row mb-3">
       <div class="col-md-6">
