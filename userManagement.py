@@ -2,7 +2,7 @@ import sqlite3 as sql
 import bcrypt
 
 
-def getLogs(filter_by_dev=None, start_date=None, end_date=None):
+def getLogs(filter_by_dev=None, start_date=None, end_date=None, project=None):
     con = sql.connect("databaseFiles/database.db")
     try:
         con.row_factory = sql.Row
@@ -18,6 +18,9 @@ def getLogs(filter_by_dev=None, start_date=None, end_date=None):
         if end_date:
             query += " AND DATE(log_entry_time) <= DATE(?)"
             parameters.append(end_date)
+        if project:
+            query += " AND project = ?"
+            parameters.append(project)
         query += " ORDER BY log_entry_time DESC"
         cur.execute(query, parameters)
         headings = cur.fetchall()
@@ -56,6 +59,20 @@ def get_all_devs():
         return [row[0] for row in headings]
     except Exception as e:
         print(f"Database error in getting logs: {e}")
+        return []
+    finally:
+        con.close()
+
+
+def get_all_projects():
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute("SELECT DISTINCT project FROM logs ORDER BY project ASC")
+        headings = cur.fetchall()
+        return [row[0] for row in headings]
+    except Exception as e:
+        print(f"Database error in getting projects: {e}")
         return []
     finally:
         con.close()

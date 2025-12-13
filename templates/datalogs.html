@@ -6,7 +6,7 @@
   <div class="row mb-4">
     <div class="col-md-12">
       <form action="{{ url_for('datalogs') }}" method="GET" class="row g-3 align-items-end">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <label for="developerFilter" class="form-label">Filter by Developer:</label>
           <select name="developer" id="developerFilter" class="form-select">
             <option value="">All Developers</option>
@@ -18,16 +18,27 @@
           </select>
         </div>
         <div class="col-md-3">
-          <label for="startDate" class="form-label">Start Date (required):</label>
+          <label for="projectFilter" class="form-label">Filter by Project:</label>
+          <select name="project" id="projectFilter" class="form-select">
+            <option value="">All Projects</option>
+            {% for proj in projects %}
+            <option value="{{ proj }}" {% if project == proj %}selected{% endif %}>
+              {{ proj }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="startDate" class="form-label">Start Date:</label>
           <input type="date" name="start_date" id="startDate" class="form-control" value="{{ start_date or '' }}">
         </div>
-        <div class="col-md-3">
-          <label for="endDate" class="form-label">End Date (required):</label>
+        <div class="col-md-2">
+          <label for="endDate" class="form-label">End Date:</label>
           <input type="date" name="end_date" id="endDate" class="form-control" value="{{ end_date or '' }}">
         </div>
         <div class="col-md-2">
           <button type="submit" class="btn btn-secondary w-100">Filter</button>
-          {% if current_filter or start_date or end_date %}
+          {% if current_filter or start_date or end_date or project %}
           <a href="{{ url_for('datalogs') }}" class="btn btn-outline-secondary w-100 mt-2">Clear</a>
           {% endif %}
         </div>
@@ -79,9 +90,10 @@
   </div>
   <p class="text-muted">
     Showing {{ logs|length }} log(s)
-    {% if current_filter or start_date or end_date %}
+    {% if current_filter or start_date or end_date or project %}
     with filters: 
     {% if current_filter %}<strong>Developer: {{ current_filter }}</strong>{% endif %}
+    {% if project %}<strong>Project: {{ project }}</strong>{% endif %}
     {% if start_date %}<strong>From: {{ start_date }}</strong>{% endif %}
     {% if end_date %}<strong>To: {{ end_date }}</strong>{% endif %}
     {% endif %}
