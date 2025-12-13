@@ -187,6 +187,15 @@ def datalogs():
     )
 
 
+@app.route("/logdetails/<int:log_id>", methods=["GET"])
+@login_required
+def logdetails(log_id):
+    log = dbHandler.getLogByID(log_id)
+    if not log:
+        return redirect("/datalogds.html")
+    return render_template("/logdetails.html", log=log)
+
+
 # example CSRF protected form
 @app.route("/form.html", methods=["POST", "GET"])
 def form():

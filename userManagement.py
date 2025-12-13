@@ -2,7 +2,6 @@ import sqlite3 as sql
 import bcrypt
 
 
-### example
 def getLogs(filter_by_dev=None):
     con = sql.connect("databaseFiles/database.db")
     try:
@@ -10,18 +9,36 @@ def getLogs(filter_by_dev=None):
         cur = con.cursor()
         if filter_by_dev:
             cur.execute(
-                "SELECT developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE developer = ? ORDER BY log_entry_time DESC",
+                "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE developer = ? ORDER BY log_entry_time DESC",
                 (filter_by_dev,),
             )
         else:
             cur.execute(
-                "SELECT developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs ORDER BY log_entry_time DESC"
+                "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs ORDER BY log_entry_time DESC"
             )
         headings = cur.fetchall()
         return [dict(row) for row in headings]
     except Exception as e:
         print(f"Database error in getting logs: {e}")
         return []
+    finally:
+        con.close()
+
+
+def getLogByID(log_id):
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        cur.execute(
+            "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes From logs WHERE id = ?",
+            (log_id,),
+        )
+        headings = cur.fetchone()
+        return dict(headings) if headings else None
+    except Exception as e:
+        print(f"Database error in getting logs: {e}")
+        return None
     finally:
         con.close()
 

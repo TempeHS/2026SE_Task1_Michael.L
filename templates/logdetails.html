@@ -1,0 +1,69 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Log Entry Details</h1>
+    <a href="{{ url_for('datalogs') }}" class="btn btn-secondary"
+      >Back to Logs</a
+    >
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <h5 class="text-muted">Developer</h5>
+          <p class="fs-5">{{ log.developer }}</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">Project</h5>
+          <p class="fs-5">{{ log.project }}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <h5 class="text-muted">Start Time</h5>
+          <p>{{ log.start_time }}</p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">End Time</h5>
+          <p>{{ log.end_time }}</p>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <h5 class="text-muted">Time Worked</h5>
+          <p class="fs-4"><strong>{{ log.time_worked }}</strong></p>
+        </div>
+        <div class="col-md-6">
+          <h5 class="text-muted">Log Entry Time</h5>
+          <p>{{ log.log_entry_time }}</p>
+        </div>
+      </div>
+
+      {% if log.repo %}
+      <div class="row mb-3">
+        <div class="col-12">
+          <h5 class="text-muted">Repository</h5>
+          <p>
+            <a href="{{ log.repo }}" target="_blank" rel="noopener noreferrer"
+              >{{ log.repo }}</a
+            >
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      <div class="row">
+        <div class="col-12">
+          <h5 class="text-muted">Developer Notes</h5>
+          <div class="border rounded p-3 bg-light">
+            <p style="white-space: pre-wrap">{{ log.developer_notes }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

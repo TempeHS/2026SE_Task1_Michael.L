@@ -2,10 +2,11 @@
 {% block content %}
 <div class="container mt-4">
   <h1>Team Data Logs</h1>
-  <div class="row mb-3">
+  <br/>
+  <div class="row mb-4">
     <div class="col-md-6">
-      <form action="{{ url_for('datalogs') }}" method="GET" class="d-flex align-items-center">
-        <label for="developerFilter" class="me-2">Filter by Developer:</label>
+      <form action="{{ url_for('datalogs') }}" method="GET" class="d-flex align-items-center flex-nowrap">
+        <label for="developerFilter" class="me-2 text-nowrap">Filter by Developer:</label>
         <select name="developer" id="developerFilter" class="form-select me-2" onchange="this.form.submit()">
           <option value="">All Developers</option>
           {% for dev in developers %}
@@ -33,6 +34,7 @@
           <th>End Time</th>
           <th>Time Worked</th>
           <th>Notes</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -55,7 +57,9 @@
           <td>{{ log.end_time }}</td>
           <td><strong>{{ log.time_worked }}</strong></td>
           <td>{{ log.developer_notes[:50] }}{% if log.developer_notes|length > 50 %}...{% endif %}</td>
-          <td>{{ log.created }}</td>
+          <td>
+            <a href="{{ url_for('logdetails', log_id=log.id) }}" class="btn btn-sm btn-info">View Details</a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
