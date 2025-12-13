@@ -3,12 +3,41 @@ import bcrypt
 
 
 ### example
-def getUsers():
+def getLogs(filter_by_dev=None):
     con = sql.connect("databaseFiles/database.db")
-    cur = con.cursor()
-    cur.execute("SELECT * FROM UserInfo").fetchall()
-    con.close()
-    return cur
+    try:
+        con.row_factory = sql.Row
+        cur = con.cursor()
+        if filter_by_dev:
+            cur.execute(
+                "SELECT developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE developer = ? ORDER BY log_entry_time DESC",
+                (filter_by_dev,),
+            )
+        else:
+            cur.execute(
+                "SELECT developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs ORDER BY log_entry_time DESC"
+            )
+        headings = cur.fetchall()
+        return [dict(row) for row in headings]
+    except Exception as e:
+        print(f"Database error in getting logs: {e}")
+        return []
+    finally:
+        con.close()
+
+
+def get_all_devs():
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute("SELECT DISTINCT developer FROM logs ORDER BY developer ASC")
+        headings = cur.fetchall()
+        return [row[0] for row in headings]
+    except Exception as e:
+        print(f"Database error in getting logs: {e}")
+        return []
+    finally:
+        con.close()
 
 
 def insertUser(email, password):
@@ -78,6 +107,3 @@ def insertLogs(
     finally:
         con.close()
     return True
-
-
-def getlogs(): ...

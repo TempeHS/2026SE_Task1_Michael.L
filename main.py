@@ -175,7 +175,16 @@ def login_required(f):
 def datalogs():
     if request.method == "POST":
         return render_template("/addlogs.html")
-    return render_template("/datalogs.html")
+    filter_by_dev = request.args.get("developer", None)
+    if filter_by_dev:
+        all_devs = dbHandler.get_all_devs()
+        if filter_by_dev not in all_devs:
+            filter_by_dev = None
+    user_logs = dbHandler.getLogs(filter_by_dev)
+    developers = dbHandler.get_all_devs()
+    return render_template(
+        "/datalogs.html", logs=user_logs, developers=developers, filter=filter_by_dev
+    )
 
 
 # example CSRF protected form
