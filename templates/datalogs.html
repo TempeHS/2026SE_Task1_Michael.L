@@ -53,8 +53,8 @@
             -
             {% endif %}
           </td>
-          <td>{{ log.start_time }}</td>
-          <td>{{ log.end_time }}</td>
+          <td>{{ log.start_time | datetimeformat }}</td>
+          <td>{{ log.end_time | datetimeformat }}</td>
           <td><strong>{{ log.time_worked }}</strong></td>
           <td>{{ log.developer_notes[:50] }}{% if log.developer_notes|length > 50 %}...{% endif %}</td>
           <td>

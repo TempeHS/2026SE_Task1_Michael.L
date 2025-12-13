@@ -8,6 +8,7 @@ from flask import session
 from flask import make_response
 from flask.sessions import SecureCookieSessionInterface
 from datetime import timedelta
+from datetime import datetime
 from functools import wraps
 import requests
 from flask_wtf import CSRFProtect
@@ -158,6 +159,18 @@ def twofactorauth():
     if "user" not in session:
         return redirect("/login.html")
     return render_template("/2fa.html")
+
+
+@app.template_filter("datetimeformat")
+def datetimeformat(value, format="%B %d, %Y at %I:%M %p"):
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        try:
+            value = datetime.fromisoformat(value.replace("T", " "))
+        except (ValueError, AttributeError):
+            return value
+    return value.strftime(format)
 
 
 def login_required(f):
