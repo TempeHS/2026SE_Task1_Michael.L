@@ -4,21 +4,33 @@
   <h1>Team Data Logs</h1>
   <br/>
   <div class="row mb-4">
-    <div class="col-md-6">
-      <form action="{{ url_for('datalogs') }}" method="GET" class="d-flex align-items-center flex-nowrap">
-        <label for="developerFilter" class="me-2 text-nowrap">Filter by Developer:</label>
-        <select name="developer" id="developerFilter" class="form-select me-2" onchange="this.form.submit()">
-          <option value="">All Developers</option>
-          {% for dev in developers %}
-          <option value="{{ dev }}" {% if current_filter == dev %}selected{% endif %}>
-            {{ dev }}
-          </option>
-          {% endfor %}
-        </select>
-        <button type="submit" class="btn btn-secondary">Filter</button>
-        {% if current_filter %}
-        <a href="{{ url_for('datalogs') }}" class="btn btn-outline-secondary ms-2">Clear Filter</a>
-        {% endif %}
+    <div class="col-md-12">
+      <form action="{{ url_for('datalogs') }}" method="GET" class="row g-3 align-items-end">
+        <div class="col-md-4">
+          <label for="developerFilter" class="form-label">Filter by Developer:</label>
+          <select name="developer" id="developerFilter" class="form-select">
+            <option value="">All Developers</option>
+            {% for dev in developers %}
+            <option value="{{ dev }}" {% if current_filter == dev %}selected{% endif %}>
+              {{ dev }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="startDate" class="form-label">Start Date (required):</label>
+          <input type="date" name="start_date" id="startDate" class="form-control" value="{{ start_date or '' }}">
+        </div>
+        <div class="col-md-3">
+          <label for="endDate" class="form-label">End Date (required):</label>
+          <input type="date" name="end_date" id="endDate" class="form-control" value="{{ end_date or '' }}">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-secondary w-100">Filter</button>
+          {% if current_filter or start_date or end_date %}
+          <a href="{{ url_for('datalogs') }}" class="btn btn-outline-secondary w-100 mt-2">Clear</a>
+          {% endif %}
+        </div>
       </form>
     </div>
   </div>
@@ -67,17 +79,16 @@
   </div>
   <p class="text-muted">
     Showing {{ logs|length }} log(s)
-    {% if current_filter %}
-    for developer: <strong>{{ current_filter }}</strong>
+    {% if current_filter or start_date or end_date %}
+    with filters: 
+    {% if current_filter %}<strong>Developer: {{ current_filter }}</strong>{% endif %}
+    {% if start_date %}<strong>From: {{ start_date }}</strong>{% endif %}
+    {% if end_date %}<strong>To: {{ end_date }}</strong>{% endif %}
     {% endif %}
   </p>
   {% else %}
   <div class="alert alert-info">
-    No logs found.
-    {% if current_filter %}
-    for developer <strong>{{ current_filter }}</strong>
-    {% endif %}
-    Add your first log entry!
+    No logs found with the current filters.
   </div>
   {% endif %}
 

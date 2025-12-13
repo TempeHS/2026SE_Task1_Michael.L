@@ -2,20 +2,24 @@ import sqlite3 as sql
 import bcrypt
 
 
-def getLogs(filter_by_dev=None):
+def getLogs(filter_by_dev=None, start_date=None, end_date=None):
     con = sql.connect("databaseFiles/database.db")
     try:
         con.row_factory = sql.Row
         cur = con.cursor()
+        query = "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE 1=1"
+        parameters = []
         if filter_by_dev:
-            cur.execute(
-                "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE developer = ? ORDER BY log_entry_time DESC",
-                (filter_by_dev,),
-            )
-        else:
-            cur.execute(
-                "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs ORDER BY log_entry_time DESC"
-            )
+            query += " AND developer = ?"
+            parameters.append(filter_by_dev)
+        if start_date:
+            query += " AND DATE(log_entry_time) >= DATE(?)"
+            parameters.append(start_date)
+        if end_date:
+            query += " AND DATE(log_entry_time) <= DATE(?)"
+            parameters.append(end_date)
+        query += " ORDER BY log_entry_time DESC"
+        cur.execute(query, parameters)
         headings = cur.fetchall()
         return [dict(row) for row in headings]
     except Exception as e:
