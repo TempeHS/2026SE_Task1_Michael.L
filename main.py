@@ -5,8 +5,6 @@ from flask import request
 from flask import jsonify
 from flask import url_for
 from flask import session
-from flask import make_response
-from flask.sessions import SecureCookieSessionInterface
 from datetime import timedelta
 from datetime import datetime
 from functools import wraps
@@ -14,11 +12,6 @@ import requests
 from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
-import pyopt
-import pyqrcode
-import os
-import base64
-from io import BytesIO
 import secrets
 import userManagement as dbHandler
 
@@ -36,6 +29,10 @@ logging.basicConfig(
 # Generate a unique basic 16 key: https://acte.ltd/utils/randomkeygen
 app = Flask(__name__)
 app.secret_key = b"_53oi3uriq9pifpff;apl"
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+app.config["SESSION_COOKIE_SECURE"] = True
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 csrf = CSRFProtect(app)
 
 
@@ -89,18 +86,7 @@ def login():
             session["user"] = email
             session["SID"] = secrets.token_urlsafe(32)
             session.permanent = False
-            response = make_response(redirect("/2fa.html"))
-            serializer = SecureCookieSessionInterface().get_signing_serializer(app)
-            cookie_value = serializer.dumps(dict(session))
-            cookie_name = app.config.get("SESSION_COOKIE_NAME", "session")
-            response.set_cookie(
-                cookie_name,
-                cookie_value,
-                httponly=True,
-                secure=True,
-                samesite="Lax",
-            )
-            return response
+            return redirect("/2fa.html")
         else:
             return render_template("/login.html", error="Invalid Email or Password")
     else:
