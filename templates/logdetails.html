@@ -2,20 +2,7 @@
 <div class="container mt-4">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h1>Log Entry Details</h1>
-    <a href="{{ url_for('datalogs') }}" class="btn btn-secondary"
-      >Back to Logs</a
-    >
-    <a href="{{ url_for('editlog', log_id=log.id) }}" class="btn btn-secondary"
-      >Edit Log</a
-    >
-    <button
-      type="button"
-      class="btn btn-danger"
-      data-bs-toggle="modal"
-      data-bs-target="#deleteModal"
-    >
-      Delete Log
-    </button>
+    <a href="{{ url_for('datalogs') }}" class="btn btn-info">Back to Logs</a>
   </div>
 
   <div class="card">
@@ -74,6 +61,21 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div>
+  </br>
+    <div class="d-grid gap-2">
+      <a href="{{ url_for('editlog', log_id=log.id) }}" class="btn btn-info">Edit Log</a>
+      <button
+        type="button"
+        class="btn btn-danger"
+        data-bs-toggle="modal"
+        data-bs-target="#deleteModal"
+      >
+        Delete Log
+      </button>
     </div>
   </div>
 
