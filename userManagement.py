@@ -58,7 +58,7 @@ def get_all_devs():
         headings = cur.fetchall()
         return [row[0] for row in headings]
     except Exception as e:
-        print(f"Database error in getting logs: {e}")
+        print(f"Database error in getting devs: {e}")
         return []
     finally:
         con.close()
@@ -155,7 +155,45 @@ def deleteLog(log_id):
         con.commit()
         return True
     except Exception as e:
-        print(f"Database error in getting projects: {e}")
+        print(f"Database error in deleting logs: {e}")
+        con.rollback()
+        return False
+    finally:
+        con.close()
+
+
+def updatelog(
+    log_id,
+    developer,
+    project,
+    repo,
+    start_time,
+    end_time,
+    log_entry_time,
+    time_worked,
+    developer_notes,
+):
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute(
+            "UPDATE logs SET developer = ?, project = ?, repo = ?, start_time = ?, end_time = ?, log_entry_time = ?, time_worked = ?, developer_notes = ? WHERE id = ?",
+            (
+                developer,
+                project,
+                repo,
+                start_time,
+                end_time,
+                log_entry_time,
+                time_worked,
+                developer_notes,
+                log_id,
+            ),
+        )
+        con.commit()
+        return True
+    except Exception as e:
+        print(f"Database error in updating logs: {e}")
         con.rollback()
         return False
     finally:

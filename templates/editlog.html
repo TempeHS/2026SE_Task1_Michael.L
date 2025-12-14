@@ -1,0 +1,123 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  {% if is_done %}
+  <div class="alert alert-success">Log updated successfully</div>
+  {% elif error %}
+  <div class="alert alert-danger">Error updating log</div>
+  {% endif %}
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Edit Log</h1>
+    <a
+      href="{{ url_for('logdetails', log_id=log.id) }}"
+      class="btn btn-secondary"
+      >Cancel</a
+    >
+  </div>
+
+  <form action="{{ url_for('editlog', log_id=log.id) }}" method="POST">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Developer</label>
+        <input
+          type="text"
+          class="form-control"
+          name="developer"
+          value="{{ log.developer }}"
+          placeholder="Developer name"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Project</label>
+        <input
+          type="text"
+          class="form-control"
+          name="project"
+          value="{{ log.project }}"
+          placeholder="Project name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label class="form-label">Repo</label>
+        <input
+          type="text"
+          class="form-control"
+          name="repo"
+          value="{{ log.repo }}"
+          placeholder="repository link"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Start Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="start_time"
+          value="{{ log.start_time }}"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">End Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="end_time"
+          value="{{ log.end_time }}"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Log Entry Time</label>
+        <input
+          type="datetime-local"
+          class="form-control"
+          name="log_entry_time"
+          value="{{ log.log_entry_time }}"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Time Worked</label>
+        <input
+          type="text"
+          class="form-control"
+          name="time_worked"
+          value="{{ log.time_worked }}"
+          placeholder="e.g., 2.5 hours"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Developer Notes</label>
+      <textarea
+        class="form-control"
+        name="developer_notes"
+        rows="5"
+        placeholder="Enter detailed notes about the work performed..."
+      >
+{{ log.developer_notes }}</textarea
+      >
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Update Log</button>
+    </div>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+  </form>
+</div>
+{% endblock %}

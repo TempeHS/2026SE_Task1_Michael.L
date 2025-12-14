@@ -225,6 +225,41 @@ def deletelog(log_id):
         return redirect(url_for("logdetails", log_id=log_id))
 
 
+@app.route("/editlog/<int:log_id>", methods=["POST", "GET"])
+def editlog(log_id):
+
+    log = dbHandler.getLogByID(log_id)
+    if not log:
+        return redirect("/datalogs.html")
+
+    if request.method == "POST":
+        developer = request.form["developer"]
+        project = request.form["project"]
+        repo = request.form["repo"]
+        start_time = request.form["start_time"]
+        end_time = request.form["end_time"]
+        log_entry_time = request.form["log_entry_time"]
+        time_worked = request.form["time_worked"]
+        developer_notes = request.form["developer_notes"]
+
+        if dbHandler.updatelog(
+            log_id,
+            developer,
+            project,
+            repo,
+            start_time,
+            end_time,
+            log_entry_time,
+            time_worked,
+            developer_notes,
+        ):
+            return redirect(url_for("logdetails", log_id=log_id))
+        else:
+            return render_template("/editlog.html", log=log, error=True)
+    else:
+        return render_template("/editlog.html", log=log)
+
+
 # example CSRF protected form
 @app.route("/form.html", methods=["POST", "GET"])
 def form():

@@ -5,6 +5,9 @@
     <a href="{{ url_for('datalogs') }}" class="btn btn-secondary"
       >Back to Logs</a
     >
+    <a href="{{ url_for('editlog', log_id=log.id) }}" class="btn btn-secondary"
+      >Edit Log</a
+    >
     <button
       type="button"
       class="btn btn-danger"
