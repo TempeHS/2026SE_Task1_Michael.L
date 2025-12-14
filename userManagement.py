@@ -145,3 +145,18 @@ def insertLogs(
     finally:
         con.close()
     return True
+
+
+def deleteLog(log_id):
+    con = sql.connect("databaseFiles/database.db")
+    try:
+        cur = con.cursor()
+        cur.execute("DELETE FROM logs WHERE id = ?", (log_id,))
+        con.commit()
+        return True
+    except Exception as e:
+        print(f"Database error in getting projects: {e}")
+        con.rollback()
+        return False
+    finally:
+        con.close()

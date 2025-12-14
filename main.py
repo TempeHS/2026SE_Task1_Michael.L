@@ -213,6 +213,18 @@ def logdetails(log_id):
     return render_template("/logdetails.html", log=log)
 
 
+@app.route("/deletelog/<int:log_id>", methods=["POST"])
+@login_required
+def deletelog(log_id):
+    log = dbHandler.getLogByID(log_id)
+    if not log:
+        return redirect("/datalogs.html")
+    if dbHandler.deleteLog(log_id):
+        return redirect("/datalogs.html")
+    else:
+        return redirect(url_for("logdetails", log_id=log_id))
+
+
 # example CSRF protected form
 @app.route("/form.html", methods=["POST", "GET"])
 def form():
