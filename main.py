@@ -13,6 +13,10 @@ from flask_wtf import CSRFProtect
 from flask_csp.csp import csp_header
 import logging
 import secrets
+import pyotp
+import qrcode
+import base64
+from io import BytesIO
 import userManagement as dbHandler
 
 # Code snippet for logging a message
@@ -144,7 +148,37 @@ def addlogs():
 def twofactorauth():
     if "user" not in session:
         return redirect("/login.html")
-    return render_template("/2fa.html")
+
+    if "user_secret" not in session:
+        user_secret = pyotp.random_base32()
+        session["user_secret"] = user_secret
+    else:
+        user_secret = session["user_secret"]
+
+    totp = pyotp.TOTP(user_secret)
+
+    if request.method == "POST":
+        otp_input = request.form.get("otp")
+        if totp.verify(otp_input):
+            session["2fa_verified"] = True
+            session.pop("user_secret", None)
+            return redirect("datalogs.html")
+        else:
+            return render_template("/2fa.html", error="Invalid OTP, please try again")
+
+    username = session.get("user")
+    otp_uri = totp.provisioning_uri(name=username, issuer_name="Developer Logs App")
+
+    qr = qrcode.QRCode(version=1, box_size=10, border=5)
+    qr.add_data(otp_uri)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+
+    stream = BytesIO()
+    img.save(stream, format="PNG")
+    qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
+
+    return render_template("/2fa.html", qr_code=qr_code_b64)
 
 
 @app.template_filter("datetimeformat")
@@ -164,6 +198,8 @@ def login_required(f):
     def login_required_decoration(*args, **kwargs):
         if "user" not in session:
             return redirect("/login.html")
+        if not session.get("2fa_verified", False):
+            return redirect("/2fa.html")
         return f(*args, **kwargs)
 
     return login_required_decoration
