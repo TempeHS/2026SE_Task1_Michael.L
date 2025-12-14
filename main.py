@@ -148,7 +148,6 @@ def addlogs():
 def twofactorauth():
     if "user" not in session:
         return redirect("/login.html")
-
     if "user_secret" not in session:
         user_secret = pyotp.random_base32()
         session["user_secret"] = user_secret
@@ -164,20 +163,30 @@ def twofactorauth():
             session.pop("user_secret", None)
             return redirect("datalogs.html")
         else:
-            return render_template("/2fa.html", error="Invalid OTP, please try again")
+            username = session.get("user")
+            otp_uri = totp.provisioning_uri(
+                name=username, issuer_name="Developer Logs App"
+            )
+            qr = qrcode.QRCode(version=1, box_size=10, border=5)
+            qr.add_data(otp_uri)
+            qr.make(fit=True)
+            img = qr.make_image(fill_color="black", back_color="white")
+            stream = BytesIO()
+            img.save(stream, format="PNG")
+            qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
+            return render_template(
+                "/2fa.html", qr_code=qr_code_b64, error="Invalid code. please try again"
+            )
 
     username = session.get("user")
     otp_uri = totp.provisioning_uri(name=username, issuer_name="Developer Logs App")
-
     qr = qrcode.QRCode(version=1, box_size=10, border=5)
     qr.add_data(otp_uri)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
-
     stream = BytesIO()
     img.save(stream, format="PNG")
     qr_code_b64 = base64.b64encode(stream.getvalue()).decode("utf-8")
-
     return render_template("/2fa.html", qr_code=qr_code_b64)
 
 
