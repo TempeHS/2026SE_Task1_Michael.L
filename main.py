@@ -109,7 +109,7 @@ def signup():
         email = request.form["email"]
         password = request.form["password"]
         if dbHandler.insertUser(email, password):
-            return render_template("/signup.html", is_done=True)
+            return render_template("/login.html", is_done=True)
         else:
             return render_template("/signup.html", dupe=True)
     else:
