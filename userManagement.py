@@ -7,7 +7,7 @@ def getLogs(filter_by_dev=None, start_date=None, end_date=None, project=None):
     try:
         con.row_factory = sql.Row
         cur = con.cursor()
-        query = "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes FROM logs WHERE 1=1"
+        query = "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes, created_by FROM logs WHERE 1=1"
         parameters = []
         if filter_by_dev:
             query += " AND developer = ?"
@@ -38,7 +38,7 @@ def getLogByID(log_id):
         con.row_factory = sql.Row
         cur = con.cursor()
         cur.execute(
-            "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes From logs WHERE id = ?",
+            "SELECT id, developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes, created_by From logs WHERE id = ?",
             (log_id,),
         )
         headings = cur.fetchone()
