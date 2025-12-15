@@ -136,6 +136,7 @@ def addlogs():
             log_entry_time,
             time_worked,
             developer_notes,
+            session["user"],
         ):
             return render_template("/addlogs.html", is_done=True)
         else:

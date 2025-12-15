@@ -121,12 +121,13 @@ def insertLogs(
     log_entry_time,
     time_worked,
     developer_notes,
+    created_by,
 ):
     con = sql.connect("databaseFiles/database.db")
     try:
         cur = con.cursor()
         cur.execute(
-            "INSERT INTO logs (developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes) VALUES (?,?,?,?,?,?,?,?)",
+            "INSERT INTO logs (developer, project, repo, start_time, end_time, log_entry_time, time_worked, developer_notes, created_by) VALUES (?,?,?,?,?,?,?,?,?)",
             (
                 developer,
                 project,
@@ -136,6 +137,7 @@ def insertLogs(
                 log_entry_time,
                 time_worked,
                 developer_notes,
+                created_by,
             ),
         )
         con.commit()
