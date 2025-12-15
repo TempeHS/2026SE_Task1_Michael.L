@@ -265,6 +265,15 @@ def deletelog(log_id):
     log = dbHandler.getLogByID(log_id)
     if not log:
         return redirect("/datalogs.html")
+    if log.get("created_by") != session["user"]:
+        return (
+            render_template(
+                "/logdetails.html",
+                log=log,
+                error="You are not authorised to delete this log",
+            ),
+            403,
+        )
     if dbHandler.deleteLog(log_id):
         return redirect("/datalogs.html")
     else:
@@ -278,6 +287,15 @@ def editlog(log_id):
     if not log:
         return redirect("/datalogs.html")
 
+    if log.get("created_by") != session["user"]:
+        return (
+            render_template(
+                "/editlog.html",
+                log=log,
+                error="You are not authorised to edit this log",
+            ),
+            403,
+        )
     if request.method == "POST":
         developer = request.form["developer"]
         project = request.form["project"]

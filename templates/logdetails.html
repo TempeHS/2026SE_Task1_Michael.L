@@ -67,6 +67,7 @@
   <div>
   </br>
     <div class="d-grid gap-2">
+      {% if log.created_by == session.user %}
       <a href="{{ url_for('editlog', log_id=log.id) }}" class="btn btn-info">Edit Log</a>
       <button
         type="button"
@@ -76,6 +77,9 @@
       >
         Delete Log
       </button>
+      {% else %}
+      <p class="text-muted">You can only edit or delete logs you created.</p>
+      {% endif %}
     </div>
   </div>
 
