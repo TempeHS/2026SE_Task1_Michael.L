@@ -1,3 +1,10 @@
+"""
+User Management module for Devloper Logs Application
+
+This application handles all database operations for user authentication and developer
+log management.
+"""
+
 import sqlite3 as sql
 import bcrypt
 

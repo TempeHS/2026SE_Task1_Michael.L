@@ -1,3 +1,18 @@
+"""
+Main module for Developer Logs Application
+
+This application provides a secure platform for the software engineering team of developers
+to log and track their work sessions. It includes user authentication, 2FA, CSRF protection,
+and secure session management.
+
+Features:
+    - Team member registration and login with password verification
+    - Time-based one-time password for two-factor authentication
+    - Developer working log/diary creation, viewing, editing, and deleting
+    - Filtering logs by developer, time, or project
+    - Secure session handling with cookies
+"""
+
 from flask import Flask
 from flask import redirect
 from flask import render_template
