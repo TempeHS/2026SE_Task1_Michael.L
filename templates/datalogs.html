@@ -40,8 +40,8 @@
           <label for="endDate" class="form-label">End Date:</label>
           <input type="date" name="end_date" id="endDate" class="form-control" value="{{ end_date or '' }}">
         </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-secondary w-100">Filter</button>
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-success w-100">Filter</button>
           {% if current_filter or start_date or end_date or project %}
           <a href="{{ url_for('datalogs') }}" class="btn btn-outline-secondary w-100 mt-2">Clear</a>
           {% endif %}
