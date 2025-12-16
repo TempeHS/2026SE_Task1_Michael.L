@@ -25,3 +25,42 @@ body {
   gap: 20px;
   padding: 10px 0;
 }
+
+.offline-banner {
+  background: linear-gradient(90deg, #ff0000, #000000, #ff0000);
+  background-size: 300% 100%;
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out, rgAnimate 3s linear infinite;
+}
+
+.offline-banner p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rgbAnimat {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
