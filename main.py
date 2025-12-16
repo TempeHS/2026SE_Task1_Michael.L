@@ -200,6 +200,12 @@ def datetimeformat(value, format="%B %d, %Y at %I:%M %p"):
             value = datetime.fromisoformat(value.replace("T", " "))
         except (ValueError, AttributeError):
             return value
+    minutes = value.minute
+    rounded_minutes = int(round(minutes / 15) * 15)
+    if rounded_minutes == 60:
+        value = value.replace(minute=0) + timedelta(hours=1)
+    else:
+        value = value.replace(minute=rounded_minutes)
     return value.strftime(format)
 
 
