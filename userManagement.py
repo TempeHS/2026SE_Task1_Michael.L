@@ -1,8 +1,19 @@
 """
-User Management module for Devloper Logs Application
+User Management module for Developer Logs Application
 
 This application handles all database operations for user authentication and developer
 log management.
+
+Functions:
+    - getlogs
+    - getLogByID
+    - get_all_Devs
+    - get_all_projects
+    - insertUser
+    - VerifyUser
+    - insertLogs
+    - deleteLog
+    - updateLog
 """
 
 import sqlite3 as sql
