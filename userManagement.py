@@ -20,7 +20,9 @@ import sqlite3 as sql
 import bcrypt
 
 
-def getLogs(filter_by_dev=None, start_date=None, end_date=None, project=None):
+def getLogs(
+    filter_by_dev=None, start_date=None, end_date=None, project=None, search=None
+):
     con = sql.connect("databaseFiles/database.db")
     try:
         con.row_factory = sql.Row
@@ -39,6 +41,12 @@ def getLogs(filter_by_dev=None, start_date=None, end_date=None, project=None):
         if project:
             query += " AND project = ?"
             parameters.append(project)
+        if search:
+            query += (
+                " AND (developer_notes LIKE ? OR project LIKE ? or developer LIKE ?)"
+            )
+            search_term = f"%{search}%"
+            parameters.extend([search_term, search_term, search_term])
         query += " ORDER BY log_entry_time DESC"
         cur.execute(query, parameters)
         headings = cur.fetchall()

@@ -7,6 +7,10 @@
     <div class="col-md-12">
       <form action="{{ url_for('datalogs') }}" method="GET" class="row g-3 align-items-end">
         <div class="col-md-3">
+          <label for="searchContent" class="form-label">Search Content:</label>
+          <input type="text" name="search" id="searchContent" class="form-control" value="{{ search or '' }}" placeholder="Search logs...">
+        </div>
+        <div class="col-md-2">
           <label for="developerFilter" class="form-label">Filter by Developer:</label>
           <select name="developer" id="developerFilter" class="form-select">
             <option value="">All Developers</option>
@@ -17,7 +21,7 @@
             {% endfor %}
           </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
           <label for="projectFilter" class="form-label">Filter by Project:</label>
           <select name="project" id="projectFilter" class="form-select">
             <option value="">All Projects</option>
@@ -90,8 +94,9 @@
   </div>
   <p class="text-muted">
     Showing {{ logs|length }} log(s)
-    {% if current_filter or start_date or end_date or project %}
+    {% if current_filter or start_date or end_date or project or search %}
     with filters: 
+    {% if search %}<strong>Search: "{{ search }}"</strong>{% endif %}
     {% if current_filter %}<strong>Developer: {{ current_filter }}</strong>{% endif %}
     {% if project %}<strong>Project: {{ project }}</strong>{% endif %}
     {% if start_date %}<strong>From: {{ start_date }}</strong>{% endif %}

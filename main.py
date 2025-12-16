@@ -245,6 +245,7 @@ def datalogs():
     start_date = request.args.get("start_date", None)
     end_date = request.args.get("end_date", None)
     project = request.args.get("project", None)
+    search = request.args.get("search", None)
 
     if filter_by_dev:
         all_devs = dbHandler.get_all_devs()
@@ -256,7 +257,7 @@ def datalogs():
         if project not in all_projects:
             project = None
 
-    user_logs = dbHandler.getLogs(filter_by_dev, start_date, end_date, project)
+    user_logs = dbHandler.getLogs(filter_by_dev, start_date, end_date, project, search)
     developers = dbHandler.get_all_devs()
     projects = dbHandler.get_all_projects()
     return render_template(
@@ -268,6 +269,7 @@ def datalogs():
         start_date=start_date,
         end_date=end_date,
         project=project,
+        search=search,
     )
 
 
